@@ -1,3 +1,6 @@
+import { renderListWithTemplate } from './utils.mjs';
+
+
 function productCardTemplate(product) {
     return `<li class="product-card">
     <a href="../product_pages/?product=${product.Id}">
