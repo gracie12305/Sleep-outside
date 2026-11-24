@@ -1,4 +1,5 @@
 import { getLocalStorage, setLocalStorage } from './utils.mjs';
+import CheckoutProcess from './CheckoutProcess.mjs';
 
 function renderCartContents() {
   const cartItems = getLocalStorage('so-cart');
@@ -43,3 +44,6 @@ function removeItem(id) {
 }
 
 renderCartContents();
+
+const checkout = new CheckoutProcess('so-cart', '.cart-footer');
+checkout.init();
